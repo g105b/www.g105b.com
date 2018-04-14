@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Greg Bowler's little bit of the web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+<header class="c-header">
+	<h1 data-glitch="G105B">G105B</h1>
+	<script>
+		(function(element) {
+			function doGlitch() {
+				element.classList.add("glitch");
+				setTimeout(function() {
+					element.classList.remove("glitch");
+					scheduleGlitch();
+				}, Math.random() * 1000);
+			}
+			function scheduleGlitch() {
+				console.log("sched");
+				setTimeout(doGlitch, (Math.random() * 30000) + 3000);
+			}
+
+			scheduleGlitch();
+		})(document.querySelector("[data-glitch]"));
+	</script>
+</header>

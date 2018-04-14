@@ -1,0 +1,20 @@
+<header class="c-header">
+	<h1 data-glitch="G105B"><a href="/">G105B</a></h1>
+	<script>
+		(function(element) {
+			function doGlitch() {
+				element.classList.add("glitch");
+				setTimeout(function() {
+					element.classList.remove("glitch");
+					scheduleGlitch();
+				}, Math.random() * 1000);
+			}
+			function scheduleGlitch() {
+				console.log("sched");
+				setTimeout(doGlitch, (Math.random() * 30000) + 3000);
+			}
+
+			scheduleGlitch();
+		})(document.querySelector("[data-glitch]"));
+	</script>
+</header>

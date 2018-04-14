@@ -1,0 +1,18 @@
+<article>
+	<header>
+		<h1>
+			<a href="/blog/yyyy/mm/dd/slug"
+			data-bind:text="title"
+			data-bind:href="link">
+				!Article title!
+			</a>
+		</h1>
+		<time datetime="2017-01-01" data-bind:text="date">!Date of article!</time>
+	</header>
+	<section class="content">
+		<p data-bind:text="preview">
+			!Parsed Markdown content with truncation!
+		</p>
+		<p><a href="/blog/yyyy/mm/dd/slug" data-bind:href="link">Continue reading...</a></p>
+	</section>
+</article>
